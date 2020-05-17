@@ -28,11 +28,50 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul,
+ol {
+  list-style: none;
+}
+
+button.active {
+  border-color: blue;
+}
+
+.todo-list {
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.todo-item {
+  font-style: italic;
+  text-align: left;
+  position: relative;
+}
+
+.todo-item > .mark {
+  position: absolute;
+  top: 4px;
+  cursor: pointer;
+}
+
+.todo-item > .text {
+  padding-left: 20px;
+}
+
+.todo-item > .fa-times {
+  color: #ccc;
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.todo-item:hover > .fa-times {
+  color: black;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
 }
