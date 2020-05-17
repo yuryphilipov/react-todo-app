@@ -3,11 +3,11 @@ import { load } from "redux-localstorage-simple";
 
 let initialState = load({ namespace: "todo-list" });
 
-// if (!TASKS || !TASKS.length || !TASKS.tasks.length) {
-//   TASKS = {
-//     tasks: [],
-//   };
-// }
+if (!initialState || !initialState.tasks) {
+  initialState = {
+    tasks: [],
+  };
+}
 
 const tasks = (state = initialState.tasks, { id, text, isCompleted, type }) => {
   switch (type) {
