@@ -1,12 +1,12 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import Title from "./components/title/title";
 import ToDo from "./containers/todo/todo";
 
 const App = () => {
   return (
-    <div className='App'>
-      <Title title='ToDo list' />
+    <div className="App">
+      <Title title="ToDo list" />
       <ToDo />
     </div>
   );
